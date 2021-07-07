@@ -1,4 +1,9 @@
-<p>home-container works!</p>
 
-and the child:
-<app-home></app-home>
+<div class="d-flex flex-wrap align-items-end" >
+    <div *ngFor="let item of list" class="m-2">
+        <app-home [cardItem]="item" (emitAlert)="showAlert($event)"></app-home>
+    </div>   
+</div>
+
+
+

@@ -1,10 +1,11 @@
-<p>home works!</p>
 
-<div class="card" style="width: 18rem;">
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
+
+<div class="card" style="width: 18rem;"  >
+     <img [src]="cardItem.img" class="card-img-top" alt="..."> 
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">{{cardItem.name}}</h5>
+      <p class="card-text">{{cardItem.status}}</p>
+      <p class="card-text">{{cardItem.nickname}}</p>
+      <a (click)="emitEvent(cardItem?.nickname)" class="btn btn-primary">view detail</a>
     </div>
   </div>
