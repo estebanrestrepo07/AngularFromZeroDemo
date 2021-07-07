@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HomeService {
-  apiurl:string = "https://www.breakingbadapi.com/api/"
+  apiurl:string = "https://www.breakingbadapi.com/api/";
   constructor(private http: HttpClient) { }
   getApiInfo():any{         
      return this.http.get(`${this.apiurl}characters`);
