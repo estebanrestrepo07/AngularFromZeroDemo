@@ -1,9 +1,14 @@
+<div class="home container">
 
-<div class="d-flex flex-wrap align-items-end" >
-    <div *ngFor="let item of list" class="m-2">
+  <div class="home-title">
+    <h1>{{title}}</h1>
+  </div>
+
+  <div class="home-content justify-content-center">
+    <div class="d-flex flex-wrap align-items-center">
+      <div *ngFor="let item of list" class="m-2 ">
         <app-home [cardItem]="item" (emitAlert)="showAlert($event)"></app-home>
-    </div>   
+      </div>
+    </div>
+  </div>
 </div>
-
-
-

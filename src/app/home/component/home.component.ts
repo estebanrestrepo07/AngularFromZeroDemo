@@ -8,16 +8,14 @@ import { ICardItem } from 'src/app/models/card-item';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   @Input() cardItem: ICardItem = {};
-
   @Output() emitAlert = new EventEmitter();
-  constructor() {
-  }
 
-  emitEvent($event: any) {
+  constructor() {}
+
+  public emitEvent($event: any): void {
     this.emitAlert.emit($event);
   }
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 }

@@ -9,22 +9,23 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./home-container.component.scss']
 })
 export class HomeContainerComponent implements OnInit, OnDestroy {
-
+  public title: string = "The Breaking Bad Cast"
   public list: any[] = [];
   public destroy$:Subject<void> = new Subject<void>();
 
   constructor(private service: HomeService) { }
+
   ngOnInit(): void {
     this.service.getApiInfo().pipe(takeUntil(this.destroy$)).subscribe((list:any) => {
       this.list = list;
     });
   }
 
-  showAlert($event:string){
+  public showAlert($event:string): void {
     alert($event);
   }
 
-  ngOnDestroy(){
+  public ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }

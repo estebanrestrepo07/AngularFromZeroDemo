@@ -1,11 +1,9 @@
-
-
 <div class="card" style="width: 18rem;"  >
-     <img [src]="cardItem.img" class="card-img-top" alt="..."> 
-    <div class="card-body">
-      <h5 class="card-title">{{cardItem.name}}</h5>
-      <p class="card-text">{{cardItem.status}}</p>
-      <p class="card-text">{{cardItem.nickname}}</p>
-      <a (click)="emitEvent(cardItem?.nickname)" class="btn btn-primary">view detail</a>
-    </div>
+    <img [src]="cardItem.img" class="card-img" alt="..."> 
+  <div class="card-body">
+    <h5 class="card-title">{{cardItem.name}}</h5>
+    <p class="card-text">{{cardItem.status}}</p>
+    <p class="card-text">{{cardItem.nickname}}</p>
+    <div (click)="emitEvent(cardItem?.nickname)" class="btn btn-primary">view detail</div>
   </div>
+</div>
